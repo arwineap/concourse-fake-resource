@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+require 'json'
+
+inp = ''
+inp += $stdin.read
+payload = JSON.parse(inp.to_s)
+
+############
+### MAIN ###
+############
+STDERR.puts '###'
+STDERR.puts `find .`
+STDERR.puts '###'
+STDERR.puts `pwd`
+
+output_metadata = Hash.new
+
+puts output_metadata.to_json
